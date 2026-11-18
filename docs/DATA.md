@@ -22,3 +22,17 @@ Nothing under `data/` is committed. Each teammate downloads the files by hand.
 Then run `python scripts/prepare_data.py --config configs/base.yaml`.
 It writes `data/processed/`: `qc.csv`, `stations/*.parquet`, `calibration.parquet`,
 `{validation,test}_seed*.parquet` and `labels_*_seed*.csv`.
+
+## Data use and protection (everyone must follow)
+- **Own account each.** Every teammate registers their own PeMS account. Never share a
+  login, and never put usernames, passwords or tokens in the repo (`.env` is not committed).
+- **No raw or processed data in git.** `/data/` and `/runs/` are git-ignored; the repo is
+  public, so share data only privately within the team (e.g. a shared drive), not on GitHub.
+- **Download by hand, at low volume.** The PeMS Conditions of Use forbid using the system
+  "for other than its intended purposes" and attempts to defeat its security. We do not
+  script logins or bulk scraping.
+- **Attribution.** The report and README cite "Caltrans Performance Measurement System
+  (PeMS), https://pems.dot.ca.gov" and, for PEMS-BAY, Li et al. 2018 (DCRNN, ICLR).
+- **No personal data.** PeMS loop-detector data is aggregated speed/flow per station; it
+  holds no personal information. Do not join it with any data that does.
+- **Results we publish** (tables, plots, metrics) are derived aggregates and fine to share.

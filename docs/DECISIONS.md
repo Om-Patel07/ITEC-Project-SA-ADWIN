@@ -9,6 +9,6 @@ From "Research findings that change the design" in the plan. Add a row for each 
 | F3 | ADWIN is two-sided: fires on any mean change. | Alerts on incident recovery and speed-ups, doubling false alerts. | Direction filter (newer window slower) + cooldown, applied identically to all 4 methods in post-processing. |
 | F4 | Holt-Winters keeps learning during an incident. | Incident is absorbed; residual shrinks and next day's forecast is wrong. | If residual > k sd, update HW with forecast/clipped value. Test as an ablation. |
 | F5 | River 0.26.1 HoltWinters additive bug (issue #2077); waits max(2, m) values before starting. | Additive HW from River gives wrong forecasts. | Own HW class (~60 lines, O(1) per update), unit-tested vs statsmodels. |
-| F6 | PeMS needs an account (1-2 business days); programmatic download disallowed. | Data could block Week 1. | Register now; download by hand. Fallback: PEMS-BAY (DCRNN repo, 325 sensors, 5-min, Jan-May 2017). |
+| F6 | PeMS needs an account (1-2 business days). Its Conditions of Use prohibit use beyond intended purposes. | Data could block Week 1. | Register now; each member uses their own account; download by hand (see docs/DATA.md). Fallback: PEMS-BAY (DCRNN repo, 325 sensors, 5-min, Jan-May 2017). |
 
 Notes: traffic has daily (288) and weekly (2016) cycles; test both. Avoid METR-LA (~8% missing stored as zeros).
