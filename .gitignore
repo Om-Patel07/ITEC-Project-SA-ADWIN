@@ -1,7 +1,10 @@
-data/
-runs/
+/data/
+/runs/
 CLAUDE.local.md
 .claude/settings.local.json
 .claude/worktrees/
 .venv/
 __pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/

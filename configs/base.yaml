@@ -1,0 +1,29 @@
+# Shared experiment config. Splits are fixed after Week 1 (S2).
+data:
+  source: pems_bay            # pems_bay (fallback, Week 1) | pems (Clearinghouse)
+  pems_bay_h5: data/raw/pems-bay.h5
+  pems_dir: data/raw/pems     # d04_text_station_5min_YYYY_MM_DD.txt.gz files
+  pems_meta: null             # d04_text_meta_YYYY_MM_DD.txt
+  processed_dir: data/processed
+  start: "2017-02-27"         # Monday; 6 weeks, no US public holiday inside
+  n_weeks: 6
+  stations: null              # null = choose automatically
+  n_stations: 30
+  min_observed: 0.90
+  max_fill_steps: 3
+
+split:                        # week numbers are 1-based, Monday-start
+  calibration: [1, 2]
+  validation: [3]
+  test: [4, 5, 6]
+
+inject:
+  severities: [0.20, 0.35, 0.50]
+  durations_min: [15, 30, 60]
+  onset_types: [sudden, gradual]
+  per_station_week: 2
+  min_gap_hours: 24
+  peak_fraction: 0.5
+  recovery_steps: 3
+  seeds_validation: [101]               # seed set A
+  seeds_test: [201, 202, 203, 204, 205] # seed set B

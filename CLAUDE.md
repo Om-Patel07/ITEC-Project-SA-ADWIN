@@ -3,7 +3,8 @@ Holt-Winters residual -> ADWIN, vs rolling Z-score, HW + static threshold, Vanil
 Plan: https://claude.ai/artifact/4ajcgVGSBYti6yWvtjEBRK · Progress: @docs/STATUS.md
 
 ## Commands
-- Install: `pip install -e ".[dev]"`
+- Install (Python 3.11+): `pip install -e ".[dev]"`
+- Data: see docs/DATA.md, then `python scripts/prepare_data.py --config configs/base.yaml`
 - Tests: `pytest -q` (synthetic data, no PeMS needed)
 - Lint: `ruff check src tests && ruff format src tests`
 - Run: `python scripts/run_experiment.py --config configs/base.yaml`
