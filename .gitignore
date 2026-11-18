@@ -1,10 +1,13 @@
 /data/
 /runs/
-CLAUDE.local.md
-.claude/settings.local.json
-.claude/worktrees/
 .venv/
 __pycache__/
 *.egg-info/
 .pytest_cache/
 .ruff_cache/
+
+# Claude Code setup is personal (kept locally, not shared)
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+docs/handoffs/

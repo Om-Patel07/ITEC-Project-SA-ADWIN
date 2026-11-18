@@ -5,11 +5,11 @@ State: todo / doing / done. Update your row in the same PR as the change.
 
 | Stage | Owner | Due | Done when | State |
 |---|---|---|---|---|
-| PeMS account + PEMS-BAY fallback | Om | Nov 18 | Account requested, PEMS-BAY downloaded (docs/DATA.md) | doing |
+| PeMS account + PEMS-BAY fallback | Om | Nov 18 | Account requested, PEMS-BAY downloaded (docs/DATA.md) | doing (PEMS-BAY done; PeMS account pending) |
 | S0 Acquire | Om | Nov 24 | 6+ weeks, 20-40 mainline stations, one district | todo |
-| S1 Clean + QC | Om | Nov 24 | Gaps <= 3 filled; < 90% observed dropped; QC table saved | doing (code + tests done; run on data) |
-| S2 Split | Om | Nov 24 | Cal wk 1-2, val wk 3, test wk 4-6 fixed in config | doing (code + tests done; run on data) |
-| S3 Inject | Om | Nov 24 | labels.csv; 10 random injections look plausible to all 3 | doing (code + tests done; plot check pending) |
+| S1 Clean + QC | Om | Nov 24 | Gaps <= 3 filled; < 90% observed dropped; QC table saved | done (PEMS-BAY: 325/325 kept, top 30 used) |
+| S2 Split | Om | Nov 24 | Cal wk 1-2, val wk 3, test wk 4-6 fixed in config | done |
+| S3 Inject | Om | Nov 24 | labels.csv; 10 random injections look plausible to all 3 | doing (labels written; plot check pending) |
 | S4 Replay | Om | Nov 24 | Unit test: no detector can read a future value | done |
 | S5 Holt-Winters (own class) | Jasmit | Nov 24 | Matches statsmodels on a fixed series (m=288, 2016) | todo |
 | S5 Vanilla ADWIN + SA-ADWIN | Jasmit | Nov 24 | clock=1, [0,1] scaling, robust HW update | todo |
